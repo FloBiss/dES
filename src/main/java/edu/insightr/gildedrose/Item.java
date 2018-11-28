@@ -1,11 +1,11 @@
 package edu.insightr.gildedrose;
 
-public class Item {
+public abstract class Item implements IUpdate {
 
-    private String name;
-    private int sellIn;
+    protected String name;
+    protected int sellIn;
 
-    private int quality;
+    protected int quality;
 
     public Item(String name, int sellIn, int quality) {
         super();
@@ -13,7 +13,9 @@ public class Item {
         this.sellIn = sellIn;
         this.quality = quality;
     }
-
+    public Item(){
+        super();
+    }
     public String getName() {
         return name;
     }
